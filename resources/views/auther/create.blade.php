@@ -1,5 +1,4 @@
-@extends('layouts.app')
-@section('content')
+@extends('layouts.admin_layout')@section('content')
 <div id="admin-content">
     <div class="container">
         <div class="row">

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin_layout')
 
 @section('content')
 
@@ -7,14 +7,24 @@
             <div class="col-12">
                 <h2 class="admin-heading mb-4">Tableau de bord</h2>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card text-center">
-                    <div class="card-body">
+
+             <!-- ./col -->
+            <div class="col-lg-3 col-6">
+
+            <!-- small box -->
+
+                <div class="small-box bg-warning">
+                    <div class="inner">
+                        <h4>{{ $authors }}</h4>
+
                         <h5 class="card-title mb-0">Liste des auteurs</h5>
-                        <p class="card-text">{{ $authors }}</p>
+                    </div>
+                    <div class="icon">
+                        <i class="icon icon-person"></i>
+                    </div>
+                    <a href="{{ route('authors') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
-            </div>
             <div class="col-md-4 mb-4">
                 <div class="card text-center">
                     <div class="card-body">
@@ -23,6 +33,9 @@
                     </div>
                 </div>
             </div>
+
+            <!-- ./col -->
+            
             <div class="col-md-4 mb-4">
                 <div class="card text-center">
                     <div class="card-body">
