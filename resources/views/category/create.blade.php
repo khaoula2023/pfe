@@ -17,7 +17,7 @@
                         <div class="form-group">
                             <label> Nom Categorie </label>
                             <input type="text" class="form-control @error('name') isinvalid @enderror"
-                                placeholder="Category Name" name="name" value="{{ old('name') }}" required>
+                                placeholder=" Nom de Categorie" name="name" value="{{ old('name') }}" required>
                             @error('name')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}

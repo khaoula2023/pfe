@@ -1,7 +1,7 @@
 @extends('layouts.guest')
 
 @section('content')
-    <nav class="navbar navbar-expand-md bg-warning navbar-warning  text-warning">
+    <nav class="navbar navbar-expand-md bg-teal navbar-teal  text-teal">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainmenu">
                 <span class="navbar-toggler-icon"></span>

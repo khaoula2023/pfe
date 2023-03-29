@@ -81,7 +81,7 @@
                 type: "get",
                 success: function(student) {
                     console.log(student);
-                    form ="<tr><td>Student Name :</td><td><b>"+student['name']+"</b></td></tr><tr><td>Address :</td><td><b>"+student['address']+"</b></td></tr><tr><td>Gender :</td><td><b>"+ student['gender']+ "</b></td></tr><tr><td>Class :</td><td><b>"+ student['class']+ "</b></td></tr><tr><td>Age :</td><td><b>"+ student['age']+ "</b></td></tr><tr><td>Phone :</td><td><b>"+ student['phone']+ "</b></td></tr><tr><td>Email :</td><td><b>"+ student['email']+ "</b></td></tr>";
+                    form ="<tr><td>Nom abonné :</td><td><b>"+student['name']+"</b></td></tr><tr><td>Addresse :</td><td><b>"+student['address']+"</b></td></tr><tr><td>Genre :</td><td><b>"+ student['gender']+ "</b></td></tr><tr><td>Fonction :</td><td><b>"+ student['class']+ "</b></td></tr><tr><td>Age :</td><td><b>"+ student['age']+ "</b></td></tr><tr><td>Telephone :</td><td><b>"+ student['phone']+ "</b></td></tr><tr><td>Email :</td><td><b>"+ student['email']+ "</b></td></tr>";
           console.log(form);
 
                     $("#modal-form table").html(form);

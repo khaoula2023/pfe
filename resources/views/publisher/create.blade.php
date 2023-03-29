@@ -16,7 +16,7 @@
                     @csrf
                     <div class="form-group">
                         <label> Nom Edition</label>
-                        <input type="text" class="form-control @error('name') isinvalid @enderror" placeholder="Publisher Name" name="name" value="{{ old('name') }}" required>
+                        <input type="text" class="form-control @error('name') isinvalid @enderror" placeholder=" Nom Edition" name="name" value="{{ old('name') }}" required>
                         @error('name')
                             <div class="alert alert-danger" role="alert">
                                 {{ $message }}
