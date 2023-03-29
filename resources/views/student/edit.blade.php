@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">Modifier Aboné</h2>
+                    <h2 class="admin-heading">Modifier Abonné</h2>
                 </div>
             </div>
             <div class="row">
@@ -13,7 +13,7 @@
                         autocomplete="off">
                         @csrf
                         <div class="form-group">
-                            <label> Nom Aboné</label>
+                            <label> Nom Abonné</label>
                             <input type="text" class="form-control" placeholder="Student Name" name="name"
                                 value="{{ $student->name }}" required>
                             @error('name')
@@ -36,9 +36,9 @@
                             <label>Genre</label>
                             <select name="gender" class="form-control">
                                 @if ($student->gneder == 'male')
-                                    <option value="male" selected>Homme</option>
+                                    <option value="male" selected>male</option>
                                 @else
-                                    <option value="female" selected>Femme</option>
+                                    <option value="female" selected>female</option>
                                 @endif
                             </select>
                             @error('gender')

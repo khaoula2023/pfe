@@ -7,7 +7,7 @@
                     <h2 class="admin-heading">Ajouter Abonné</h2>
                 </div>
                 <div class="offset-md-7 col-md-2">
-                    <a class="add-new" href="{{ route('students') }}">Tous les Abonés</a>
+                    <a class="add-new" href="{{ route('students') }}">Tous les Abonnés</a>
                 </div>
             </div>
             <div class="row">
@@ -15,7 +15,7 @@
                     <form class="yourform" action="{{ route('student.store') }}" method="post" autocomplete="off">
                         @csrf
                         <div class="form-group">
-                            <label> Nom Aboné</label>
+                            <label> Nom Abonné</label>
                             <input type="text" class="form-control" placeholder="Student Name" name="name"
                                 value="{{ old('name') }}" required>
                             @error('name')

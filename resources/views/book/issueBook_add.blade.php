@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">opération de prêt de livre</h2>
+                    <h2 class="admin-heading">opération de prêt </h2>
                 </div>
                 <div class="offset-md-7 col-md-2">
                     <a class="add-new" href="{{ route('book_issued') }}">Liste de tous les prêts</a>
@@ -16,7 +16,7 @@
                         autocomplete="off">
                         @csrf
                         <div class="form-group">
-                            <label> Nom Abonés</label>
+                            <label> Nom Abonné</label>
                             <select class="form-control" name="student_id" required>
                                 <option value="">Select Name</option>
                                 @foreach ($students as $student)
@@ -43,7 +43,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <input type="submit" name="save" class="btn btn-danger" value="save">
+                        <input type="submit" name="save" class="btn btn-danger" value="Enregistrer">
                     </form>
                 </div>
             </div>

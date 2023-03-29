@@ -23,8 +23,9 @@
                     <div class="col-md-12">
                         <table class="content-table">
                             <thead>
+                            <tr class="bg-primary" </tr>
                                 <th>Numero</th>
-                                <th>Nom Aboné</th>
+                                <th>Nom Abonné</th>
                                 <th>Titre</th>
                                 <th>Telephone</th>
                                 <th>Email</th>

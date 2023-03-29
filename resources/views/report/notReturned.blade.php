@@ -12,6 +12,7 @@
                     <div class="col-md-12">
                         <table class="content-table">
                             <thead>
+                            <tr class="bg-primary" </tr>
                                 <th>Numero</th>
                                 <th>Nom Abonés</th>
                                 <th>Titre</th>

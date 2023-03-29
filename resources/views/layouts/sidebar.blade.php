@@ -7,7 +7,7 @@
             <a href="{{ route('dashboard') }}" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
-                Dashboard
+                Tableau de bord
               </p>
             </a>
                
@@ -15,21 +15,21 @@
             <a href="{{ route('authors') }}" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
-                Authors
+                Auteurs
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="{{ route('publishers') }}" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
+            <i class="nav-icon fab fa-readme "></i>
               <p>
-                Publishers
+                Editeurs
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="{{ route('categories') }}" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
+            <i class="nav-icon fab fa-readme "></i>
               <p>
                 Categories
               </p>
@@ -37,9 +37,9 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('books') }}" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
+              <i class="nav-icon fab fa-readme "></i>
               <p>
-                Books
+                Livres
               </p>
             </a>
           </li>
@@ -47,34 +47,36 @@
             <a href="{{ route('students') }}" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
-                Reg Students
+                Les Abonnés
               </p>
             </a>
           </li>
+         
           <li class="nav-item">
             <a href="{{ route('book_issued') }}" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
+            <i class="nav-icon fab fa-readme "></i>
               <p>
-                Book Issue
+                Emprunte
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="{{ route('reports') }}" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
+            <i class="nav-icon fab fa-readme "></i>
               <p>
-                Reports
+                Rapports
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="{{ route('settings') }}" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
+              <i class="nav-icon fas fa-cog"></i>
               <p>
-                Settings
+                Paramétres
               </p>
             </a>
           </li>
+         
           
       </nav>
       <!-- /.sidebar-menu -->

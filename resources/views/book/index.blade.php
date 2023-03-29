@@ -15,8 +15,12 @@
                 <div class="col-md-12">
                     <div class="message"></div>
                     <table class="content-table">
+                    <table class="table">
+                       <thead class="thead-dark"> 
+                        <tr>
                         <thead>
-                            <th>Numero</th>
+                        <tr class="bg-primary" </tr>
+                            <th>Numero Local</th>
                             <th>Titre</th>
                             <th>Categorie</th>
                             <th>Auteur</th>
@@ -35,7 +39,7 @@
                                     <td>{{ $book->publisher->name }}</td>
                                     <td>
                                         @if ($book->status == 'Y')
-                                            <span class='badge badge-success'>Available</span>
+                                            <span class='badge badge-success'>Diponible</span>
                                         @else
                                             <span class='badge badge-danger'>Issued</span>
                                         @endif

@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">Return Book</h2>
+                    <h2 class="admin-heading"> livre Retourné </h2>
                 </div>
             </div>
             <div class="row">
@@ -39,7 +39,7 @@
                             @if ($book->issue_status == 'Y')
                                 <tr>
                                     <td>Status</td>
-                                    <td><b>Returned</b></td>
+                                    <td><b>Returné</b></td>
                                 </tr>
                                 <tr>
                                     <td>Returned On</td>

@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">Tous les livres empruntés</h2>
+                    <h2 class="admin-heading"> livres empruntés</h2>
                 </div>
                 <div class="offset-md-6 col-md-3">
                     <a class="add-new" href="{{ route('book_issue.create') }}"> Ajouter un prêt de livre</a>
@@ -12,10 +12,12 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
+                    
                     <table class="content-table">
                         <thead>
+                        <tr class="bg-primary" </tr>
                             <th>Numero</th>
-                            <th> Nom abonés</th>
+                            <th> Nom abonné</th>
                             <th>Titre</th>
                             <th>Telephonehone</th>
                             <th>Email</th>
@@ -37,18 +39,18 @@
                                     <td>{{ $book->return_date->format('d M, Y') }}</td>
                                     <td>
                                         @if ($book->issue_status == 'Y')
-                                            <span class='badge badge-success'>Returned</span>
+                                            <span class='badge badge-success'>Retourné</span>
                                         @else
                                             <span class='badge badge-danger'>Issued</span>
                                         @endif
                                     </td>
                                     <td class="edit">
-                                        <a href="{{ route('book_issue.edit', $book->id) }}" class="btn btn-success">Edit</a>
+                                        <a href="{{ route('book_issue.edit', $book->id) }}" class="btn btn-success">Modifier</a>
                                     </td>
                                     <td class="delete">
                                         <form action="{{ route('book_issue.destroy', $book) }}" method="post"
                                             class="form-hidden">
-                                            <button class="btn btn-danger">Delete</button>
+                                            <button class="btn btn-danger">Supprimer</button>
                                             @csrf
                                         </form>
                                     </td>

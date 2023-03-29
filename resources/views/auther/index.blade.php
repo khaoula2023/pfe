@@ -13,11 +13,16 @@
                 <div class="col-md-12">
                     <div class="message"></div>
                     <table class="content-table">
+                    <table class="table">
+                      <thead class="thead-dark">
+                       <tr>
                         <thead>
-                            <th>Numéro</th>
+                        <tr class="bg-primary" </tr>
+                             <th>Numéro</th>
                             <th>Nom auteur</th>
                             <th>Modifier</th>
                             <th>Supprimer</th>
+                           
                         </thead>
                         <tbody>
                             @forelse ($authors as $auther)

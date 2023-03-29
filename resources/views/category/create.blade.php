@@ -15,7 +15,7 @@
                     <form class="yourform" action="{{ route('category.store') }}" method="post" autocomplete="off">
                         @csrf
                         <div class="form-group">
-                            <label>Category Name</label>
+                            <label> Nom Categorie </label>
                             <input type="text" class="form-control @error('name') isinvalid @enderror"
                                 placeholder="Category Name" name="name" value="{{ old('name') }}" required>
                             @error('name')
@@ -24,7 +24,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <input type="submit" name="save" class="btn btn-danger" value="save" required>
+                        <input type="submit" name="save" class="btn btn-danger" value="Enregistrer" required>
                     </form>
                 </div>
             </div>

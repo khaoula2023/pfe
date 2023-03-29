@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <h2 class="admin-heading">Modifier Category</h2>
+                <h2 class="admin-heading">Modifier Categorie</h2>
             </div>
         </div>
         <div class="row">
@@ -22,7 +22,7 @@
                             </div>
                         @enderror
                     </div>
-                    <input type="submit" name="submit" class="btn btn-danger" value="Update" required>
+                    <input type="submit" name="submit" class="btn btn-danger" value="Modifier" required>
                 </form>
             </div>
         </div>

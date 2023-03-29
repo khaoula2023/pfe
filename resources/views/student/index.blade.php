@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h2 class="admin-heading">Tous les Abonés</h2>
+                    <h2 class="admin-heading"> les Abonnés</h2>
                 </div>
                 <div class="offset-md-6 col-md-2">
                     <a class="add-new" href="{{ route('student.create') }}">Ajouter les abonés</a>
@@ -14,7 +14,11 @@
                 <div class="col-md-12">
                     <div class="message"></div>
                     <table class="content-table">
+                    <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
                         <thead>
+                        <tr class="bg-primary" </tr>
                             <th>Numero</th>
                             <th>Nom </th>
                             <th>Genre</th>

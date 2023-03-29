@@ -31,7 +31,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Confirm Password</label>
+                            <label>Confirmez le mot de passe</label>
                             <input type="password" class="form-control" name="password_confirmation" value="" required>
                             @error('new_password')
                                 <div class="alert alert-danger" role="alert">

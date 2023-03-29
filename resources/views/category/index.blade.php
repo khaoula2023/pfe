@@ -14,8 +14,12 @@
                 <div class="col-md-12">
                     <div class="message"></div>
                     <table class="content-table">
+                    <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
                         <thead>
-                            <th>S.No</th>
+                        <tr class="bg-primary" </tr>
+                            <th>Numero</th>
                             <th> Nom de Categorie</th>
                             <th>Modifier</th>
                             <th>Supprimer</th>
