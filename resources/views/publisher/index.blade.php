@@ -4,10 +4,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">Tout les  Editeurs</h2>
+                    <h2 class="admin-heading"> les  Editions</h2>
                 </div>
                 <div class="offset-md-7 col-md-2">
-                    <a class="add-new" href="{{ route('publisher.create') }}">Ajouter Editeur</a>
+                    <a class="add-new" href="{{ route('publisher.create') }}">Ajouter Edition</a>
                 </div>
             </div>
             <div class="row">
@@ -20,7 +20,7 @@
                         <thead>
                         <tr class="bg-primary"</tr>
                             <th>Numero</th>
-                            <th> Nom d'Editeur</th>
+                            <th> Nom d'Edition</th>
                             <th>Modifier</th>
                             <th>Supprimer</th>
                         </thead>

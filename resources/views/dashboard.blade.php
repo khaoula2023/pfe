@@ -28,7 +28,7 @@
             <div class="col-md-4 mb-4">
                 <div class="card text-center bg-pink">
                     <div class="card-body">
-                        <h5 class="card-title mb-0">Liste des éditeurs</h5>
+                        <h5 class="card-title mb-0">Liste des éditions</h5>
                         <p class="card-text">{{ $publishers }}</p>
                         <a href="{{ route('publishers') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>

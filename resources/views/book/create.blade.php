@@ -16,7 +16,7 @@
                         <div class="form-group">
                             <label> Titre</label>
                             <input type="text" class="form-control @error('name') isinvalid @enderror"
-                                placeholder="Book Name" name="name" value="{{ old('name') }}" required>
+                                placeholder=" Titre" name="name" value="{{ old('name') }}" required>
                             @error('name')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
@@ -26,7 +26,7 @@
                         <div class="form-group">
                             <label>Categorie</label>
                             <select class="form-control @error('category_id') isinvalid @enderror " name="category_id" required>
-                                <option value="">Select Category</option>
+                                <option value="">Sélectionner Categorie</option>
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                                 @endforeach
@@ -40,7 +40,7 @@
                         <div class="form-group">
                             <label>Auteur</label>
                             <select class="form-control @error('auther_id') isinvalid @enderror " name="auther_id" required>
-                                <option value="">Select Author</option>
+                                <option value="">Sélectionner Auteur</option>
                                 @foreach ($authors as $author)
                                     <option value='{{ $author->id }}'>{{ $author->name }}</option>";
                                 @endforeach
@@ -52,9 +52,9 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Editeur</label>
+                            <label>Edition</label>
                             <select class="form-control @error('publisher_id') isinvalid @enderror " name="publisher_id" required>
-                                <option value="">Select Publisher</option>
+                                <option value="">Sélectionner Edition</option>
                                 @foreach ($publishers as $publisher)
                                     <option value='{{ $publisher->id }}'>{{ $publisher->name }}</option>";
                                 @endforeach

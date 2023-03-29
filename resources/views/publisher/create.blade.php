@@ -4,10 +4,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <h2 class="admin-heading">Ajouter Editeur</h2>
+                <h2 class="admin-heading">Ajouter Edition</h2>
             </div>
             <div class="offset-md-7 col-md-2">
-              <a class="add-new" href="{{ route('publishers') }}">tous les  Editeurs</a>
+              <a class="add-new" href="{{ route('publishers') }}"> les  Editions</a>
             </div>
         </div>
         <div class="row">
@@ -15,7 +15,7 @@
                 <form class="yourform" action="{{ route('publisher.store') }}" method="post" autocomplete="off">
                     @csrf
                     <div class="form-group">
-                        <label> Nom Editeur</label>
+                        <label> Nom Edition</label>
                         <input type="text" class="form-control @error('name') isinvalid @enderror" placeholder="Publisher Name" name="name" value="{{ old('name') }}" required>
                         @error('name')
                             <div class="alert alert-danger" role="alert">

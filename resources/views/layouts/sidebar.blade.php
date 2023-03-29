@@ -23,7 +23,7 @@
             <a href="{{ route('publishers') }}" class="nav-link">
             <i class="nav-icon fab fa-readme "></i>
               <p>
-                Editeurs
+                Editions
               </p>
             </a>
           </li>

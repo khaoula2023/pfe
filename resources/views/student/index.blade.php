@@ -22,7 +22,7 @@
                             <th>Numero</th>
                             <th>Nom </th>
                             <th>Genre</th>
-                            <th>Telefhone</th>
+                            <th>Telephone</th>
                             <th>Email</th>
                             <th>Consulter</th>
                             <th>Modifier</th>
@@ -64,7 +64,7 @@
                             <table cellpadding="10px" width="100%">
 
                             </table>
-                            <div id="close-btn">X</div>
+                            <div id="close-btn"></div>
                         </div>
                     </div>
                 </div>

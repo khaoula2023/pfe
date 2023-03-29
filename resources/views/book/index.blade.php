@@ -20,11 +20,11 @@
                         <tr>
                         <thead>
                         <tr class="bg-primary" </tr>
-                            <th>Numero Local</th>
+                            <th>Numero </th>
                             <th>Titre</th>
                             <th>Categorie</th>
                             <th>Auteur</th>
-                            <th>Editeur</th>
+                            <th>Edition</th>
                             <th>Status</th>
                             <th>Modifier</th>
                             <th>Supprimer</th>
@@ -41,7 +41,7 @@
                                         @if ($book->status == 'Y')
                                             <span class='badge badge-success'>Diponible</span>
                                         @else
-                                            <span class='badge badge-danger'>Issued</span>
+                                            <span class='badge badge-danger'>Emprunté</span>
                                         @endif
                                     </td>
                                     <td class="edit">
