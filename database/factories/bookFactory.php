@@ -14,10 +14,16 @@ class bookFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->sentence(4),
+            'Titre' => $this->faker->sentence(10),
+            'Numero_local' => random_int(1,10),
+            'Numero_central' => random_int(1,10),
+            'ISBN' => random_int(1,10),
             'category_id' => random_int(1,10),
             'auther_id' => random_int(1,10),
             'publisher_id' => random_int(1,10),
+            'Classement' => $this->faker->sentence(20),
+            'Nombre_de_page' => random_int(1,10),
+            'Image_de_livre' => $this->faker->sentence(20),
             'status' => 'Y'
         ];
     }
