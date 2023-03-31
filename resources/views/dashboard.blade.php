@@ -26,7 +26,7 @@
                     </div>
                 </div>
             <div class="col-md-4 mb-4">
-                <div class="card text-center bg-pink">
+                <div class="card text-center bg-green">
                     <div class="card-body">
                         <h5 class="card-title mb-0">Liste des éditions</h5>
                         <p class="card-text">{{ $publishers }}</p>
@@ -39,7 +39,7 @@
             <!-- ./col -->
             
             <div class="col-md-4 mb-4">
-                <div class="card text-center bg-warning">
+                <div class="card text-center bg-yellow">
                     <div class="card-body">
                         <h5 class="card-title mb-0">Liste des Catégories</h5>
                         <p class="card-text">{{ $categories }}</p>
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card text-center bg-red">
+                <div class="card text-center bg-pink">
                     <div class="card-body">
                         <h5 class="card-title mb-0">Liste des Livres</h5>
                         <p class="card-text">{{ $books }}</p>
@@ -57,7 +57,7 @@
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card text-center bg-indigo">
+                <div class="card text-center bg-secondary">
                     <div class="card-body">
                         <h5 class="card-title mb-0">Enregistrer des Abonnés</h5>
                         <p class="card-text">{{ $students }}</p>

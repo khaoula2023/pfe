@@ -21,10 +21,14 @@
                         <thead>
                         <tr class="bg-primary" </tr>
                             <th>Numero </th>
+                            <th>Numero Local</th>
+                            <th>Numero Central</th>
+                            <th>ISBN</th>
                             <th>Titre</th>
                             <th>Categorie</th>
                             <th>Auteur</th>
                             <th>Edition</th>
+                            <th>Nombre de pages</th>
                             <th>Status</th>
                             <th>Modifier</th>
                             <th>Supprimer</th>
@@ -33,10 +37,14 @@
                             @forelse ($books as $book)
                                 <tr>
                                     <td class="id">{{ $book->id }}</td>
+                                    <td>{{ $book->local_number }}</td>
+                                    <td>{{ $book->central_number }}</td>
+                                     <td>{{ $book->isbn }}</td>
                                     <td>{{ $book->name }}</td>
                                     <td>{{ $book->category->name }}</td>
                                     <td>{{ $book->auther->name }}</td>
                                     <td>{{ $book->publisher->name }}</td>
+                                    <td>{{ $book->number_of_pages }}</td>
                                     <td>
                                         @if ($book->status == 'Y')
                                             <span class='badge badge-success'>Diponible</span>
@@ -67,4 +75,8 @@
             </div>
         </div>
     </div>
+
+
+
+    
 @endsection
