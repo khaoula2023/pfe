@@ -9,20 +9,18 @@
             </div>
 
              <!-- ./col -->
-            <div class="col-lg-3 col-6">
-
-            <!-- small box -->
-
-                <div class="small-box bg-primary">
-                    <div class="inner">
-                        <h4>{{ $authors }}</h4>
-
+            <div class="col-md-4 mb-4">
+                <div class="card text-center bg-green">
+                    <div class="card-body">
                         <h5 class="card-title mb-0">Liste des auteurs</h5>
+                        <p class="card-text">{{ $authors }}</p>
+                        <a href="{{ route('authors') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                       
                     </div>
                     <div class="icon">
                         <i class="icon icon-person"></i>
                     </div>
-                    <a href="{{ route('authors') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                   
                     </div>
                 </div>
             <div class="col-md-4 mb-4">
@@ -70,6 +68,7 @@
                     <div class="card-body">
                         <h5 class="card-title mb-0">Livres empruntés</h5>
                         <p class="card-text">{{ $issued_books }}</p>
+                        <a href="{{ route('students') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                         
                     </div>
                 </div>
