@@ -24,7 +24,7 @@ class StorebookRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
+            'Titre' => 'required',
             'category_id' => 'required',
             'auther_id' => 'required',
             'publisher_id' => 'required',

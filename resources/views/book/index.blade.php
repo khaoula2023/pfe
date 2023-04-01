@@ -37,14 +37,14 @@
                             @forelse ($books as $book)
                                 <tr>
                                     <td class="id">{{ $book->id }}</td>
-                                    <td>{{ $book->local_number }}</td>
-                                    <td>{{ $book->central_number }}</td>
-                                     <td>{{ $book->isbn }}</td>
-                                    <td>{{ $book->name }}</td>
+                                    <td>{{ $book->Numero_local }}</td>
+                                    <td>{{ $book->Numero_central }}</td>
+                                    <td>{{ $book->ISBN }}</td>
+                                    <td>{{ $book->Titre }}</td>
                                     <td>{{ $book->category->name }}</td>
                                     <td>{{ $book->auther->name }}</td>
                                     <td>{{ $book->publisher->name }}</td>
-                                    <td>{{ $book->number_of_pages }}</td>
+                                    <td>{{ $book->Nombre_de_page }}</td>
                                     <td>
                                         @if ($book->status == 'Y')
                                             <span class='badge badge-success'>Diponible</span>

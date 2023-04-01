@@ -19,11 +19,15 @@
                         <tr>
                         <thead>
                         <tr class="bg-primary" </tr>
-                            <th>Numero</th>
+                            <th>Numeroabonné</th>
                             <th>Nom </th>
+                            <th>Date de naissance </th>
                             <th>Genre</th>
-                            <th>Telephone</th>
                             <th>Email</th>
+                            <th>Telephone</th>
+                            <th>Address</th>
+                            <th>Fonction</th>
+                            <th>Numero CIN</th>
                             <th>Consulter</th>
                             <th>Modifier</th>
                             <th>Supprimer</th>
@@ -31,11 +35,18 @@
                         <tbody>
                             @forelse ($students as $student)
                                 <tr>
-                                    <td class="id">{{ $student->id }}</td>
-                                    <td>{{ $student->name }}</td>
-                                    <td class="text-capitalize">{{ $student->gender }}</td>
-                                    <td>{{ $student->phone }}</td>
-                                    <td>{{ $student->email }}</td>
+                                    
+                                    <td>{{ $student->Numero_abonné }}</td>
+                                    <td>{{ $student->Name }}</td>
+                                    <td>{{ $student->Date_de_naissance}}</td>
+                                    <td>{{ $student->Gender }}</td>
+                                    <td>{{ $student->Email }}</td>
+                                    <td>{{ $student->Phone }}</td>
+                                    <td>{{ $student->Address }}</td>
+                                    <td>{{ $student->Fonction }}</td>
+                                    <td>{{ $student->Numero_CIN }}</td>
+
+
                                     <td class="view">
                                         <button data-sid='{{ $student->id }}>'
                                             class="btn btn-primary view-btn">Consulter</button>
