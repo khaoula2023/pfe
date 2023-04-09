@@ -48,8 +48,8 @@
                         </div>
                         <div class="form-group">
                             <label>fonction</label>
-                            <input type="text" class="form-control" placeholder="Class" name="class"
-                                value="{{ old('class') }}" required>
+                            <input type="text" class="form-control" placeholder="fonction" name="fonction"
+                                value="{{ old('fonction') }}" required>
                             @error('class')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
@@ -57,10 +57,10 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Age</label>
-                            <input type="number" class="form-control" placeholder="Age" name="age"
-                                value="{{ old('age') }}" required>
-                            @error('age')
+                            <label>Date de naissance</label>
+                            <input type="date" class="form-control" placeholder="Date de naissance" name="Date_de_naissance"
+                                value="{{ old('Date_de_naissance') }}" required>
+                            @error('Date_de_naissance')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>
@@ -86,7 +86,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <input type="submit" name="save" class="btn btn-danger" value="save">
+                        <input type="submit" name="enregistrer" class="btn btn-danger" value="enregistrer">
                     </form>
                 </div>
             </div>

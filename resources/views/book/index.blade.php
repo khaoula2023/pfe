@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">Tous Les Livres</h2>
+                    <h2 class="admin-heading">Liste des Livres</h2>
                 </div>
                 <div class="offset-md-7 col-md-2">
                     <a class="add-new" href="{{ route('book.create') }}">Ajouter Livre</a>
@@ -65,7 +65,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="8">No Books Found</td>
+                                    <td colspan="8">LIvres introuvables </td>
                                 </tr>
                             @endforelse
                         </tbody>
