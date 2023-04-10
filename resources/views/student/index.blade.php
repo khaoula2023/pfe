@@ -13,10 +13,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="message"></div>
-                    <table class="content-table">
-                    <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
+                    <table id="example1" class="table table-bordered table-striped">
                         <thead>
                         <tr class="bg-primary" </tr>
                             <th>Numeroabonné</th>

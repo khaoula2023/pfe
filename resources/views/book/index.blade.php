@@ -14,24 +14,23 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="message"></div>
-                    <table class="content-table">
-                    <table class="table">
-                       <thead class="thead-dark"> 
-                        <tr>
+                    <table id="example1" class="table table-bordered table-striped">
                         <thead>
-                        <tr class="bg-primary" </tr>
-                            <th>Numero </th>
-                            <th>Numero Local</th>
-                            <th>Numero Central</th>
-                            <th>ISBN</th>
-                            <th>Titre</th>
-                            <th>Categorie</th>
-                            <th>Auteur</th>
-                            <th>Edition</th>
-                            <th>Nombre de pages</th>
-                            <th>Status</th>
-                            <th>Modifier</th>
-                            <th>Supprimer</th>
+
+                            <tr class="bg-primary"</tr>
+                                <th>Numero </th>
+                                <th>Numero Local</th>
+                                <th>Numero Central</th>
+                                <th>ISBN</th>
+                                <th>Titre</th>
+                                <th>Categorie</th>
+                                <th>Auteur</th>
+                                <th>Edition</th>
+                                <th>Nombre de pages</th>
+                                <th>Status</th>
+                                <th>Modifier</th>
+                                <th>Supprimer</th>
+                                
                         </thead>
                         <tbody>
                             @forelse ($books as $book)
