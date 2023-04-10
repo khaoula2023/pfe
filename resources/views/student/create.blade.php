@@ -26,7 +26,7 @@
                         </div>
                         <div class="form-group">
                             <label>Addresse</label>
-                            <input type="text" class="form-control" placeholder="Address" name="address"
+                            <input type="text" class="form-control" placeholder="Address" name="addresse"
                                 value="{{ old('address') }}" required>
                             @error('address')
                                 <div class="alert alert-danger" role="alert">
@@ -68,7 +68,7 @@
                         </div>
                         <div class="form-group">
                             <label>Telephone</label>
-                            <input type="phone" class="form-control" placeholder="Phone" name="phone"
+                            <input type="phone" class="form-control" placeholder="telephone" name="telephone"
                                 value="{{ old('phone') }}" required>
                             @error('phone')
                                 <div class="alert alert-danger" role="alert">
@@ -84,6 +84,15 @@
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>
+                            @enderror
+                            </div>
+                                <div class="form-group">
+                                  <label> Numero CIN</label>
+                          <input type="text" class="form-control" placeholder="CIN" name="cin_number" value="{{ old('cin_number') }}" required>
+                       @error('cin_number')
+                      <div class="alert alert-danger" role="alert">
+                       {{ $message }}
+                            </div>
                             @enderror
                         </div>
                         <input type="submit" name="enregistrer" class="btn btn-danger" value="enregistrer">
