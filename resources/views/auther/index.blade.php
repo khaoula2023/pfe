@@ -4,7 +4,7 @@
     <div class="card">
 
         <div class="card-header">
-            <h2 class="card-title">Tout les auteurs</h2>
+            <h2 class="card-title">liste  des auteurs</h2>
         </div>
         <div class="card-body">
             <div class="row">

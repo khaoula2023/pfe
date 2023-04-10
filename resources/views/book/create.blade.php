@@ -14,6 +14,35 @@
                     <form class="yourform" action="{{ route('book.store') }}" method="post" autocomplete="off">
                         @csrf
                         <div class="form-group">
+                            <label>Numéro Local</label>
+                            <input type="text" class="form-control @error('local_number') isinvalid @enderror"
+                                placeholder="Numéro Local" name="local_number" value="{{ old('local_number') }}" required>
+                            @error('local_number')
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                            </div>
+                        <div class="form-group">
+                            <label>Numéro Central</label>
+                            <input type="text" class="form-control @error('central_number') isinvalid @enderror"
+                                placeholder="Numéro Central" name="central_number" value="{{ old('central_number') }}" required>
+                            @error('central_number')
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                            </div>
+                        <div class="form-group">
+                            <label>ISBN</label>
+                            <input type="text" class="form-control @error('isbn') isinvalid @enderror"
+                                placeholder="ISBN" name="isbn" value="{{ old('isbn') }}" required>
+                            @error('isbn')
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        <div class="form-group">
                             <label> Titre</label>
                             <input type="text" class="form-control @error('name') isinvalid @enderror"
                                 placeholder=" Titre" name="name" value="{{ old('name') }}" required>
@@ -60,6 +89,16 @@
                                 @endforeach
                             </select>
                             @error('publisher_id')
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                            </div>
+                        <div class="form-group">
+                            <label>Nombre de pages</label>
+                            <input type="number" class="form-control @error('pages') is-invalid @enderror"
+                                placeholder="Nombre de pages" name="pages" value="{{ old('pages') }}" required>
+                            @error('pages')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>
