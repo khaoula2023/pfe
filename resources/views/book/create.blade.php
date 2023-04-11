@@ -15,9 +15,9 @@
                         @csrf
                         <div class="form-group">
                             <label>Numéro Local</label>
-                            <input type="text" class="form-control @error('local_number') isinvalid @enderror"
-                                placeholder="Numéro Local" name="local_number" value="{{ old('local_number') }}" required>
-                            @error('local_number')
+                            <input type="number" class="form-control @error('Numero_local') isinvalid @enderror"
+                                placeholder="Numéro Local" name="Numero_local" value="{{ old('Numero_local') ?? $Numero_local }}" required>
+                            @error('Numero_local')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>
@@ -25,9 +25,9 @@
                             </div>
                         <div class="form-group">
                             <label>Numéro Central</label>
-                            <input type="text" class="form-control @error('central_number') isinvalid @enderror"
-                                placeholder="Numéro Central" name="central_number" value="{{ old('central_number') }}" required>
-                            @error('central_number')
+                            <input type="number" class="form-control @error('Numero_central') isinvalid @enderror"
+                                placeholder="Numéro Central" name="Numero_central" value="{{ old('Numero_central') ?? $Numero_central }}" required>
+                            @error('Numero_central')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>
@@ -35,18 +35,18 @@
                             </div>
                         <div class="form-group">
                             <label>ISBN</label>
-                            <input type="text" class="form-control @error('isbn') isinvalid @enderror"
-                                placeholder="ISBN" name="isbn" value="{{ old('isbn') }}" required>
-                            @error('isbn')
+                            <input type="number" class="form-control @error('ISBN') isinvalid @enderror"
+                                placeholder="ISBN" name="ISBN" value="{{ old('ISBN') ?? $ISBN}}" required>
+                            @error('ISBN')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>
                             @enderror
                         <div class="form-group">
                             <label> Titre</label>
-                            <input type="text" class="form-control @error('name') isinvalid @enderror"
-                                placeholder=" Titre" name="name" value="{{ old('name') }}" required>
-                            @error('name')
+                            <input type="text" class="form-control @error('Titre') isinvalid @enderror"
+                                placeholder=" Titre" name="Titre" value="{{ old('Titre') ?? $Titre }}" required>
+                            @error('Titre')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>
@@ -96,9 +96,9 @@
                             </div>
                         <div class="form-group">
                             <label>Nombre de pages</label>
-                            <input type="number" class="form-control @error('pages') is-invalid @enderror"
-                                placeholder="Nombre de pages" name="pages" value="{{ old('pages') }}" required>
-                            @error('pages')
+                            <input type="number" class="form-control @error('Nombre_de_page') is-invalid @enderror"
+                                placeholder="Nombre de pages" name="Nombre_de_page" value="{{ old('Nombre_de_page') ?? $Nombre_de_page}}" required>
+                            @error('Nombre_de_page')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>

@@ -24,6 +24,10 @@ class StorebookRequest extends FormRequest
     public function rules()
     {
         return [
+            'Numero_local' => 'required',
+            'Numero_central' => 'required',
+            'ISBN' => 'required',
+            'Nombre_de_page' => 'required',
             'Titre' => 'required',
             'category_id' => 'required',
             'auther_id' => 'required',

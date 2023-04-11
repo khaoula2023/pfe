@@ -21,9 +21,7 @@ class bookFactory extends Factory
             'category_id' => random_int(1,10),
             'auther_id' => random_int(1,10),
             'publisher_id' => random_int(1,10),
-            'Classement' => $this->faker->sentence(20),
             'Nombre_de_page' => random_int(1,10),
-            'Image_de_livre' => $this->faker->sentence(20),
             'status' => 'Y'
         ];
     }

@@ -32,9 +32,16 @@ class BookController extends Controller
     public function create()
     {
         return view('book.create',[
+
+            
             'authors' => auther::latest()->get(),
             'publishers' => publisher::latest()->get(),
             'categories' => category::latest()->get(),
+            'Numero_local' => '',
+            'Numero_central' => '',
+            'ISBN' => '',
+            'Titre' => '',
+            'Nombre_de_page' => '',
         ]);
     }
 
@@ -62,6 +69,11 @@ class BookController extends Controller
     public function edit(book $book)
     {
         return view('book.edit',[
+            'Numero_local' => $book->Numero_local,
+            'Numero_central' => $book->Numero_central,
+            'ISBN' => $book->ISBN,
+            'Titre' => $book->Titre,
+            'Nombre_de_page' => $book->Nombre_de_page,
             'authors' => auther::latest()->get(),
             'publishers' => publisher::latest()->get(),
             'categories' => category::latest()->get(),
@@ -79,6 +91,7 @@ class BookController extends Controller
     public function update(UpdatebookRequest $request, $id)
     {
         $book = book::find($id);
+
         $book->name = $request->name;
         $book->auther_id = $request->author_id;
         $book->category_id = $request->category_id;
