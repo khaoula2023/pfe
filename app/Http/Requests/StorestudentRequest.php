@@ -24,13 +24,16 @@ class StorestudentRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => "required",
-            'address' => "required",
-            'gender' => "required",
-            'class' => "required",
-            'age' => "required",
-            'phone' => "required",
-            'email' => "required|email",
+
+            'Numero_abonné' => "required",
+            'Name' => "required",
+            'Date_de_naissance' => "required",
+            'Gender' => "required",
+            'Email' => "required|email",
+            'Phone' => "required",
+            'Address' => "required",
+            'Fonction' => "required",
+            'Numero_CIN' => "required",
         ];
     }
 }

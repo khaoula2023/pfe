@@ -92,12 +92,16 @@ class BookController extends Controller
     {
         $book = book::find($id);
 
-        $book->name = $request->name;
+        $book->Numero_local = $request->Numero_local;
+        $book->Titre = $request->Titre;
+        $book->Nombre_de_page = $request->Nombre_de_page;
+        $book->ISBN = $request->ISBN;
         $book->auther_id = $request->author_id;
         $book->category_id = $request->category_id;
         $book->publisher_id = $request->publisher_id;
         $book->save();
-        return redirect()->route('books');
+
+    return redirect()->route('books');
     }
 
     /**

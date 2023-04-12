@@ -1,20 +1,22 @@
 @extends('layouts.admin_layout')
 @section('content')
 
-    <div id="admin-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <h2 class="admin-heading">Liste des Livres</h2>
-                </div>
-                <div class="offset-md-7 col-md-2">
-                    <a class="add-new" href="{{ route('book.create') }}">Ajouter Livre</a>
-                </div>
-            </div>
+<div class="card">
+
+        <div class="card-header">
+            <h2 class="card-title">Liste des Livres</h2>
+        </div>
+        <div class="card-body">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="message"></div>
-                    <table id="example1" class="table table-bordered table-striped">
+                    <div class="pull-right">
+                        <a class="add-new" href="{{ route('book.create') }}"> <i class="fa fa-plus"> Ajouter Livre </i></a>
+                    </div>
+                </div>
+            </div>
+            <table id="example1" class="table table-bordered table-striped table length">
+
+    
                         <thead>
 
                             <tr class="bg-primary"</tr>

@@ -12,16 +12,53 @@
                     <form class="yourform" action="{{ route('book.update', $book->id) }}" method="post"
                         autocomplete="off">
                         @csrf
+
                         <div class="form-group">
-                            <label>Titre</label>
-                            <input type="text" class="form-control @error('name') isinvalid @enderror"
-                                placeholder="Book Name" name="name" value="{{ $book->name }}" >
-                            @error('name')
+                            <label>Numero Local</label>
+                            <input type="number" class="form-control @error('Numero_local') isinvalid @enderror"
+                                placeholder="Numero Local" name="Numero_local" value="{{ $book->Numero_local }}" >
+                            @error('Numero_local')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>
                             @enderror
                         </div>
+
+
+                        <div class="form-group">
+                            <label>Numero Central</label>
+                            <input type="number" class="form-control @error('Numero_central') isinvalid @enderror"
+                                placeholder="Numero Ccentral" name="Numero_central" value="{{ $book->Numero_central }}" >
+                            @error('Numero_central')
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label>ISBN</label>
+                            <input type="number" class="form-control @error('ISBN') isinvalid @enderror"
+                                placeholder="ISBN" name="ISBN" value="{{ $book->ISBN}}" >
+                            @error('ISBN')
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label>Titre</label>
+                            <input type="text" class="form-control @error('Titre') isinvalid @enderror"
+                                placeholder="Titre" name="Titre" value="{{ $book->Titre }}" >
+                            @error('Titre')
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+
+                        
                         <div class="form-group">
                             <label>Categorie</label>
                             <select class="form-control @error('category_id') isinvalid @enderror " name="category_id"
@@ -73,6 +110,17 @@
                                 @endforeach
                             </select>
                             @error('publisher_id')
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nombre de pages</label>
+                            <input type="number" class="form-control @error('Nombre_de_page') isinvalid @enderror"
+                                placeholder="Nombre_de_page" name="Nombre_de_page" value="{{ $book->Nombre_de_page }}" >
+                            @error('Nombre_de_page')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>

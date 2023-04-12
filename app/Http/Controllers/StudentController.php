@@ -16,6 +16,8 @@ class StudentController extends Controller
     public function index()
     {
         return view('student.index', [
+
+
             'students' => student::Paginate(5)
         ]);
     }
@@ -27,7 +29,18 @@ class StudentController extends Controller
      */
     public function create()
     {
-        return view('student.create');
+        return view('student.create',[
+
+            'Numero_abonné' => '',
+            'Name' => '',
+            'Date_de_naissance' => '',
+            'Gender' => '',
+            'Email' => '',
+            'Phone' => '',
+            'Address' => '',
+            'Fonction' => '',
+            'Numero_CIN' => '',
+        ]);
     }
 
     /**
@@ -64,6 +77,15 @@ class StudentController extends Controller
     public function edit(student $student)
     {
         return view('student.edit', [
+            'Numero_abonné' => $student->Numero_abonné,
+            'Name' => $student->Name,
+            'Date_de_naissance' => $student->Date_de_naissance,
+            'Gender' => $student->Gender,
+            'Email' => $student->Email,
+            'Phone' => $student->Phone,
+            'Address' => $student->Address,
+            'Fonction' => $student->Fonction,
+            'Numero_CIN' => $student->Numero_CIN,
             'student' => $student
         ]);
     }
@@ -77,16 +99,18 @@ class StudentController extends Controller
     public function update(UpdatestudentRequest $request, $id)
     {
         $student = student::find($id);
-        $student->name = $request->name;
-        $student->address = $request->address;
-        $student->gender = $request->gender;
-        $student->class = $request->class;
-        $student->age = $request->age;
-        $student->phone = $request->phone;
-        $student->email = $request->email;
+        $student->Numero_abonné = $request->Numero_abonné;
+        $student->Name = $request->Name;
+        $student->Date_de_naissance = $request->Date_de_naissance;
+        $student->Gender = $request->Gender;
+        $student->Email = $request->Email;
+        $student->Phone = $request->Phone;
+        $student->Address = $request->Address;
+        $student->Fonction = $request->Fonction;
+        $student->Numero_CIN = $request->Numero_CIN;
         $student->save();
 
-        return redirect()->route('students');
+    return redirect()->route('students');
     }
 
     /**

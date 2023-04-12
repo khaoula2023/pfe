@@ -24,7 +24,11 @@ class UpdatebookRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
+            'Numero_local' => 'required|string|max:255',
+            'Numero_central' => 'required|string|max:255',
+            'ISBN' => 'required|string|max:255',
+            'Titre' => 'required|string|max:255',
+            'Nombre_de_page' => 'required|integer',
             'category_id' => 'required',
             'author_id' => 'required',
             'publisher_id' => 'required',

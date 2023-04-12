@@ -15,20 +15,31 @@
                     <form class="yourform" action="{{ route('student.store') }}" method="post" autocomplete="off">
                         @csrf
                         <div class="form-group">
+                            <label> Numero Abonné</label>
+                            <input type="number" class="form-control" placeholder="Numero_abonné" name="Numero_abonné"
+                                value="{{ old('Numero_abonné') }}" required>
+                            @error('Numero_abonné')
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
                             <label> Nom Abonné</label>
-                            <input type="text" class="form-control" placeholder="Student Name" name="name"
-                                value="{{ old('name') }}" required>
-                            @error('name')
+                            <input type="text" class="form-control" placeholder="Nom Abonné" name="Name"
+                                value="{{ old('Name') }}" required>
+                            @error('Name')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Addresse</label>
-                            <input type="text" class="form-control" placeholder="Address" name="addresse"
-                                value="{{ old('address') }}" required>
-                            @error('address')
+                            <label>Address</label>
+                            <input type="text" class="form-control" placeholder="Address" name="Address"
+                                value="{{ old('Address') }}" required>
+                            @error('Address')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>
@@ -36,11 +47,11 @@
                         </div>
                         <div class="form-group">
                             <label>Genre</label>
-                            <select name="gender" class="form-control">
+                            <select name="Gender" class="form-control">
                                 <option value="male" selected>Homme</option>
                                 <option value="female">Femme</option>
                             </select>
-                            @error('gender')
+                            @error('Gender')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>
@@ -48,9 +59,9 @@
                         </div>
                         <div class="form-group">
                             <label>fonction</label>
-                            <input type="text" class="form-control" placeholder="fonction" name="fonction"
-                                value="{{ old('fonction') }}" required>
-                            @error('class')
+                            <input type="text" class="form-control" placeholder="Fonction" name="Fonction"
+                                value="{{ old('Fonction') }}" required>
+                            @error('Fonction')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>
@@ -68,9 +79,9 @@
                         </div>
                         <div class="form-group">
                             <label>Telephone</label>
-                            <input type="phone" class="form-control" placeholder="telephone" name="telephone"
-                                value="{{ old('phone') }}" required>
-                            @error('phone')
+                            <input type="number" class="form-control" placeholder="telephone" name="Phone"
+                                value="{{ old('Phone') }}" required>
+                            @error('Phone')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>
@@ -78,9 +89,9 @@
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" class="form-control" placeholder="Email" name="email"
-                                value="{{ old('email') }}" required>
-                            @error('email')
+                            <input type="email" class="form-control" placeholder="Email" name="Email"
+                                value="{{ old('Email') }}" required>
+                            @error('Email')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>
@@ -88,8 +99,8 @@
                             </div>
                                 <div class="form-group">
                                   <label> Numero CIN</label>
-                          <input type="text" class="form-control" placeholder="CIN" name="cin_number" value="{{ old('cin_number') }}" required>
-                       @error('cin_number')
+                          <input type="number" class="form-control" placeholder="CIN" name="Numero_CIN" value="{{ old('Numero_CIN') }}" required>
+                       @error('Numero_CIN')
                       <div class="alert alert-danger" role="alert">
                        {{ $message }}
                             </div>

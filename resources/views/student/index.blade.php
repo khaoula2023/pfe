@@ -1,22 +1,24 @@
 @extends('layouts.admin_layout')
 @section('content')
-    <div id="admin-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="admin-heading"> les Abonnés</h2>
-                </div>
-                <div class="offset-md-6 col-md-2">
-                    <a class="add-new" href="{{ route('student.create') }}">Ajouter les abonés</a>
-                </div>
-            </div>
+
+<div class="card">
+
+        <div class="card-header">
+            <h2 class="card-title">les Abonnés</h2>
+        </div>
+        <div class="card-body">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="message"></div>
-                    <table id="example1" class="table table-bordered table-striped">
+                    <div class="pull-right">
+                        <a class="add-new" href="{{ route('student.create') }}"> <i class="fa fa-plus"> Ajouter Abonés </i></a>
+                    </div>
+                </div>
+            </div>
+            <table id="example1" class="table table-bordered table-striped table length">
+
                         <thead>
                         <tr class="bg-primary" </tr>
-                            <th>Numeroabonné</th>
+                            <th>Numero Abonné</th>
                             <th>Nom </th>
                             <th>Date de naissance </th>
                             <th>Genre</th>
@@ -25,7 +27,6 @@
                             <th>Address</th>
                             <th>Fonction</th>
                             <th>Numero CIN</th>
-                            <th>Consulter</th>
                             <th>Modifier</th>
                             <th>Supprimer</th>
                         </thead>
@@ -44,10 +45,7 @@
                                     <td>{{ $student->Numero_CIN }}</td>
 
 
-                                    <td class="view">
-                                        <button data-sid='{{ $student->id }}>'
-                                            class="btn btn-primary view-btn">Consulter</button>
-                                    </td>
+                                    
                                     <td class="edit">
                                         <a href="{{ route('student.edit', $student) }}>" class="btn btn-success">Modifier</a>
                                     </td>
