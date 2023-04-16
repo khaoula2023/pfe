@@ -16,9 +16,9 @@ class CreateBooksTable extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id();
           
-            $table->integer('Numero_local');
-            $table->integer('Numero_central');
-            $table->integer('ISBN');
+            $table->bigInteger('Numero_local');
+            $table->bigInteger('Numero_central');
+            $table->bigInteger('ISBN');
             $table->string('Titre');
             $table->foreignId('category_id')->constrained();
             $table->foreignId('auther_id')->nullable()->constrained()->onDelete('cascade');

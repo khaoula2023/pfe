@@ -13,6 +13,6 @@ class BookIssueSeeder extends Seeder
      */
     public function run()
     {
-        //
+        
     }
 }

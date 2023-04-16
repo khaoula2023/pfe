@@ -14,8 +14,6 @@ class AutherSeeder extends Seeder
      */
     public function run()
     {
-        if (auther::count() == 0) {
-            auther::factory(10)->create();
-        }
+        
     }
 }

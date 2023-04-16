@@ -14,8 +14,6 @@ class PublisherSeeder extends Seeder
      */
     public function run()
     {
-        if (publisher::count() == 0) {
-            publisher::factory(10)->create();
-        }
+       
     }
 }
