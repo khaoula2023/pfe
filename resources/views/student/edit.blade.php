@@ -15,7 +15,7 @@
 
                         <div class="form-group">
                             <label> Numero Abonné</label>
-                            <input type="number" class="form-control @error('Numero_abonné ') isinvalid @enderror" 
+                            <input type="tel" class="form-control @error('Numero_abonné ') isinvalid @enderror" 
                             placeholder="Numero Abonné" name="Numero_abonné"
                                 value="{{ $student->Numero_abonné }}" >
                             @error('Numero_abonné')
@@ -76,7 +76,7 @@
 
                         <div class="form-group">
                             <label> Telephone</label>
-                            <input type="number" class="form-control @error('Phone') isinvalid @enderror" placeholder="Telephone" name="Phone"
+                            <input type="tel" class="form-control @error('Phone') isinvalid @enderror" placeholder="Telephone" name="Phone"
                                 value="{{ $student->Phone}}" >
                             @error('Phone')
                                 <div class="alert alert-danger" role="alert">
@@ -109,7 +109,7 @@
                         
                         <div class="form-group">
                             <label>Numero CIN</label>
-                            <input type="number" class="form-control @error('Numero_CIN') isinvalid @enderror" placeholder="Numero CIN" name="Numero_CIN"
+                            <input type="tel" class="form-control @error('Numero_CIN') isinvalid @enderror" placeholder="Numero CIN" name="Numero_CIN"
                                 value="{{ $student->Numero_CIN }}" required>
                             @error('Numero_CIN')
                                 <div class="alert alert-danger" role="alert">

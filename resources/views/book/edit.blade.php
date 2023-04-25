@@ -15,7 +15,7 @@
 
                         <div class="form-group">
                             <label>Numero Local</label>
-                            <input type="number" class="form-control @error('Numero_local') isinvalid @enderror"
+                            <input type="tel" class="form-control @error('Numero_local') isinvalid @enderror"
                                 placeholder="Numero Local" name="Numero_local" value="{{ $book->Numero_local }}" >
                             @error('Numero_local')
                                 <div class="alert alert-danger" role="alert">
@@ -27,7 +27,7 @@
 
                         <div class="form-group">
                             <label>Numero Central</label>
-                            <input type="number" class="form-control @error('Numero_central') isinvalid @enderror"
+                            <input type="tel" class="form-control @error('Numero_central') isinvalid @enderror"
                                 placeholder="Numero Ccentral" name="Numero_central" value="{{ $book->Numero_central }}" >
                             @error('Numero_central')
                                 <div class="alert alert-danger" role="alert">
@@ -38,7 +38,7 @@
 
                         <div class="form-group">
                             <label>ISBN</label>
-                            <input type="number" class="form-control @error('ISBN') isinvalid @enderror"
+                            <input type="tel" class="form-control @error('ISBN') isinvalid @enderror"
                                 placeholder="ISBN" name="ISBN" value="{{ $book->ISBN}}" >
                             @error('ISBN')
                                 <div class="alert alert-danger" role="alert">
@@ -118,7 +118,7 @@
 
                         <div class="form-group">
                             <label>Nombre de pages</label>
-                            <input type="number" class="form-control @error('Nombre_de_page') isinvalid @enderror"
+                            <input type="tel" class="form-control @error('Nombre_de_page') isinvalid @enderror"
                                 placeholder="Nombre_de_page" name="Nombre_de_page" value="{{ $book->Nombre_de_page }}" >
                             @error('Nombre_de_page')
                                 <div class="alert alert-danger" role="alert">

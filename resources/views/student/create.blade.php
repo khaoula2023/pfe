@@ -16,7 +16,7 @@
                         @csrf
                         <div class="form-group">
                             <label> Numero Abonné</label>
-                            <input type="number" class="form-control" placeholder="Numero_abonné" name="Numero_abonné"
+                            <input type="tel" class="form-control" placeholder="Numero_abonné" name="Numero_abonné"
                                 value="{{ old('Numero_abonné') }}" required>
                             @error('Numero_abonné')
                                 <div class="alert alert-danger" role="alert">
@@ -79,7 +79,7 @@
                         </div>
                         <div class="form-group">
                             <label>Telephone</label>
-                            <input type="number" class="form-control" placeholder="telephone" name="Phone"
+                            <input type="tel" class="form-control" placeholder="telephone" name="Phone"
                                 value="{{ old('Phone') }}" required>
                             @error('Phone')
                                 <div class="alert alert-danger" role="alert">
@@ -99,7 +99,7 @@
                             </div>
                                 <div class="form-group">
                                   <label> Numero CIN</label>
-                          <input type="number" class="form-control" placeholder="CIN" name="Numero_CIN" value="{{ old('Numero_CIN') }}" required>
+                          <input type="tel" class="form-control" placeholder="CIN" name="Numero_CIN" value="{{ old('Numero_CIN') }}" required>
                        @error('Numero_CIN')
                       <div class="alert alert-danger" role="alert">
                        {{ $message }}

@@ -15,7 +15,7 @@
                         @csrf
                         <div class="form-group">
                             <label>Numéro Local</label>
-                            <input type="number" class="form-control @error('Numero_local') isinvalid @enderror"
+                            <input type="tel" class="form-control @error('Numero_local') isinvalid @enderror"
                                 placeholder="Numéro Local" name="Numero_local" value="{{ old('Numero_local') ?? $Numero_local }}" required>
                             @error('Numero_local')
                                 <div class="alert alert-danger" role="alert">
@@ -25,7 +25,7 @@
                             </div>
                         <div class="form-group">
                             <label>Numéro Central</label>
-                            <input type="number" class="form-control @error('Numero_central') isinvalid @enderror"
+                            <input type="tel" class="form-control @error('Numero_central') isinvalid @enderror"
                                 placeholder="Numéro Central" name="Numero_central" value="{{ old('Numero_central') ?? $Numero_central }}" required>
                             @error('Numero_central')
                                 <div class="alert alert-danger" role="alert">
@@ -35,7 +35,7 @@
                             </div>
                         <div class="form-group">
                             <label>ISBN</label>
-                            <input type="number" class="form-control @error('ISBN') isinvalid @enderror"
+                            <input type="tel" class="form-control @error('ISBN') isinvalid @enderror"
                                 placeholder="ISBN" name="ISBN" value="{{ old('ISBN') ?? $ISBN}}" required>
                             @error('ISBN')
                                 <div class="alert alert-danger" role="alert">
@@ -96,7 +96,7 @@
                             </div>
                         <div class="form-group">
                             <label>Nombre de pages</label>
-                            <input type="number" class="form-control @error('Nombre_de_page') is-invalid @enderror"
+                            <input type="tel" class="form-control @error('Nombre_de_page') is-invalid @enderror"
                                 placeholder="Nombre de pages" name="Nombre_de_page" value="{{ old('Nombre_de_page') ?? $Nombre_de_page}}" required>
                             @error('Nombre_de_page')
                                 <div class="alert alert-danger" role="alert">
