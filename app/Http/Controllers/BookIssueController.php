@@ -35,6 +35,9 @@ class BookIssueController extends Controller
         return view('book.issueBook_add', [
             'students' => student::latest()->get(),
             'books' => book::where('status', 'Y')->get(),
+            'return_day' => date('Y-m-d'),
+            'issue_date' => date('Y-m-d'),
+            'issue_status' => 'N',
         ]);
     }
 
@@ -47,12 +50,12 @@ class BookIssueController extends Controller
     public function store(Storebook_issueRequest $request)
     {
         $issue_date = date('Y-m-d');
-        $return_date = date('Y-m-d', strtotime("+" . (settings::latest()->first()->return_days) . " days"));
+        $return_day = date('Y-m-d');
         $data = book_issue::create($request->validated() + [
             'student_id' => $request->student_id,
             'book_id' => $request->book_id,
             'issue_date' => $issue_date,
-            'return_date' => $return_date,
+            'return_day' => $return_day,
             'issue_status' => 'N',
         ]);
         $data->save();

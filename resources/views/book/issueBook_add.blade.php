@@ -20,7 +20,7 @@
                             <select class="form-control" name="student_id" required>
                                 <option value="">Sélectionner Nom</option>
                                 @foreach ($students as $student)
-                                    <option value='{{ $student->id }}'>{{ $student->name }}</option>
+                                    <option value='{{ $student->id }}'>{{ $student->Name }}</option>
                                 @endforeach
                             </select>
                             @error('student_id')
@@ -34,10 +34,50 @@
                             <select class="form-control" name="book_id" required>
                                 <option value="">Sélectionner Titre</option>
                                 @foreach ($books as $book)
-                                    <option value='{{ $book->id }}'>{{ $book->name }}</option>
+                                    <option value='{{ $book->id }}'>{{ $book->Titre }}</option>
                                 @endforeach
                             </select>
                             @error('book_id')
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label>Telephone</label>
+                            <input type="tel" class="form-control" placeholder="telephone" name="Phone"
+                                value="{{ old('Phone') }}" required>
+                            @error('Phone')
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" placeholder="Email" name="Email"
+                                value="{{ old('Email') }}" required>
+                            @error('Email')
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                            </div>
+                            <div class="form-group">
+                            <label>Date de prêt</label>
+                            <input type="date" class="form-control" placeholder="issue_date" name="issue_date"
+                                value="{{ old('issue_date') }}" required>
+                            @error('issue_date')
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label>Date de retour</label>
+                            <input type="date" class="form-control" placeholder="return_date" name="return_day"
+                                value="{{ old('return_day') }}" required>
+                            @error('return_date')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>

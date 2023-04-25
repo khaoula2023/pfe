@@ -1,25 +1,27 @@
 @extends('layouts.admin_layout')
 @section('content')
-    <div id="admin-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <h2 class="admin-heading"> livres empruntés</h2>
-                </div>
-                <div class="offset-md-6 col-md-3">
-                    <a class="add-new" href="{{ route('book_issue.create') }}"> Ajouter un prêt de livre</a>
-                </div>
-            </div>
+
+<div class="card">
+
+        <div class="card-header">
+            <h2 class="card-title">livres empruntés</h2>
+        </div>
+        <div class="card-body">
             <div class="row">
                 <div class="col-md-12">
-                    
-                    <table class="content-table">
+                    <div class="pull-right">
+                        <a class="add-new" href="{{ route('book_issue.create') }}"> <i class="fa fa-plus"> Ajouter un prêt de livre </i></a>
+                    </div>
+                </div>
+            </div>
+            <table id="example1" class="table table-bordered table-striped table length">
+
                         <thead>
                         <tr class="bg-primary" </tr>
                             <th>Numero</th>
                             <th> Nom abonné</th>
                             <th>Titre</th>
-                            <th>Telephonehone</th>
+                            <th>Telephone</th>
                             <th>Email</th>
                             <th>Date de prêt</th>
                             <th>Date de retour</th>
@@ -29,14 +31,14 @@
                         </thead>
                         <tbody>
                             @forelse ($books as $book)
-                                <tr style='@if (date('Y-m-d') > $book->return_date->format('d-m-Y') && $book->issue_status == 'N') ) background:rgba(255,0,0,0.2) @endif'>
+                                <tr style='@if (date('Y-m-d') > $book->return_day->format('d-m-Y') && $book->issue_status == 'N') ) background:rgba(255,0,0,0.2) @endif'>
                                     <td>{{ $book->id }}</td>
                                     <td>{{ $book->student->name }}</td>
                                     <td>{{ $book->book->name }}</td>
-                                    <td>{{ $book->student->phone }}</td>
-                                    <td>{{ $book->student->email }}</td>
+                                    <td>{{ $book->student->Phone }}</td>
+                                    <td>{{ $book->student->Email }}</td>
                                     <td>{{ $book->issue_date->format('d M, Y') }}</td>
-                                    <td>{{ $book->return_date->format('d M, Y') }}</td>
+                                    <td>{{ $book->return_day->format('d M, Y') }}</td>
                                     <td>
                                         @if ($book->issue_status == 'Y')
                                             <span class='badge badge-success'>Retourné</span>
