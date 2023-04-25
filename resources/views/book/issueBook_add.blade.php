@@ -75,7 +75,7 @@
                         </div>
                         <div class="form-group">
                             <label>Date de retour</label>
-                            <input type="date" class="form-control" placeholder="return_date" name="return_day"
+                            <input type="date" class="form-control" placeholder="return_date" name="return_da"
                                 value="{{ old('return_day') }}" required>
                             @error('return_date')
                                 <div class="alert alert-danger" role="alert">

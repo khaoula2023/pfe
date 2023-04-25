@@ -77,10 +77,10 @@ class BookIssueController extends Controller
         $first_date = date_create(date('Y-m-d'));
         $last_date = date_create($book->return_date);
         $diff = date_diff($first_date, $last_date);
-        $fine = (settings::latest()->first()->fine * $diff->format('%a'));
+        //$fine = (settings::latest()->first()->fine * $diff->format('%a'));
         return view('book.issueBook_edit', [
             'book' => $book,
-            'fine' => $fine,
+            //'fine' => $fine,
         ]);
     }
 
@@ -97,6 +97,7 @@ class BookIssueController extends Controller
         $book = book_issue::find($id);
         $book->issue_status = 'Y';
         $book->return_day = now();
+
         $book->save();
         $bookk = book::find($book->book_id);
         $bookk->status= 'Y';

@@ -33,8 +33,8 @@
                             @forelse ($books as $book)
                                 <tr style='@if (date('Y-m-d') > $book->return_day->format('d-m-Y') && $book->issue_status == 'N') ) background:rgba(255,0,0,0.2) @endif'>
                                     <td>{{ $book->id }}</td>
-                                    <td>{{ $book->student->name }}</td>
-                                    <td>{{ $book->book->name }}</td>
+                                    <td>{{ $book->student->Name }}</td>
+                                    <td>{{ $book->book->Titre }}</td>
                                     <td>{{ $book->student->Phone }}</td>
                                     <td>{{ $book->student->Email }}</td>
                                     <td>{{ $book->issue_date->format('d M, Y') }}</td>
