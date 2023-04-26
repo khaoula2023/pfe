@@ -31,7 +31,6 @@
                                 <th>Telephone</th>
                                 <th>Email</th>
                                 <th>Date d'emprunt</th>
-                                <th> Date de Retour</th>
                                 <th>Durée de Prêt </th>
                             </thead>
                             <tbody>
@@ -43,15 +42,11 @@
                                         <td>{{ $book->student->Phone }}</td>
                                         <td>{{ $book->student->Email }}</td>
                                         <td>{{ $book->issue_date->format('d M, Y') }}</td>
-                                        <td>{{ $book->return_day }}</td>
                                         <td>@php $date1 = date_create(date('Y-m-d'));
-                                            $date2 = date_create($book->return_day);
-                                            if($date1 > $date2){
-                                              $diff = date_diff($date1,$date2);
-                                              echo $days = $diff->format('%a jours');
-                                            }else{
-                                              echo '0 jours';
-                                            } @endphp</td>
+                                            $date2 = date_create($book->issue_date);
+                                            $diff = date_diff($date1,$date2);
+                                            echo $days = $diff->format('%a jours');
+                                            @endphp</td>>
                                     </tr>
                                 @empty
                                     <tr>
