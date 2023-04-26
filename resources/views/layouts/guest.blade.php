@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>{{ config('app.name', 'Library Management System')  }}</title>
+    <title> المكتبة العمومية  بالرقبة</title>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Bootstrap -->
