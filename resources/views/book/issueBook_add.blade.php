@@ -73,16 +73,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <div class="form-group">
-                            <label>Date de retour</label>
-                            <input type="date" class="form-control" placeholder="return_date" name="return_da"
-                                value="{{ old('return_day') }}" required>
-                            @error('return_date')
-                                <div class="alert alert-danger" role="alert">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                        </div>
+                        
                         <input type="submit" name="save" class="btn btn-danger" value="Enregistrer">
                     </form>
                 </div>

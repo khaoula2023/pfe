@@ -34,7 +34,7 @@
                             </tr>
                             <tr>
                                 <td>Return Date : </td>
-                                <td><b>{{ $book->return_day->format('d M, Y') }}</b></td>
+                                <td><b>{{ $book->return_day }}</b></td>
                             </tr>
                             @if ($book->issue_status == 'Y')
                                 <tr>
@@ -46,11 +46,8 @@
                                     <td><b>{{ $book->return_day->format('d M, Y') }}</b></td>
                                 </tr>
                             @else
-                                @if (date('Y-m-d') > $book->return_day->format('d-m-Y'))
-                                    <tr>
-                                        <td>Fine</td>
-                                        <td>Rs. {{ $fine }}</td>
-                                    </tr>
+                                @if (date('Y-m-d') > $book->return_day)
+                                    
                                 @endif
                             @endif
                         </table>

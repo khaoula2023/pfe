@@ -67,17 +67,7 @@
                 Rapports
               </p>
             </a>
-          </li>
-          <li class="nav-item">
-            <a href="{{ route('settings') }}" class="nav-link">
-              <i class="nav-icon fas fa-cog"></i>
-              <p>
-                Paramétres
-              </p>
-            </a>
-          </li>
-         
-          
+          </li>   
       </nav>
       <!-- /.sidebar-menu -->
     </div>

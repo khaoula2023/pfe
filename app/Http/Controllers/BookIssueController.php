@@ -35,7 +35,7 @@ class BookIssueController extends Controller
         return view('book.issueBook_add', [
             'students' => student::latest()->get(),
             'books' => book::where('status', 'Y')->get(),
-            'return_day' => date('Y-m-d'),
+            'return_day' => null,
             'issue_date' => date('Y-m-d'),
             'issue_status' => 'N',
         ]);
@@ -55,7 +55,7 @@ class BookIssueController extends Controller
             'student_id' => $request->student_id,
             'book_id' => $request->book_id,
             'issue_date' => $issue_date,
-            'return_day' => $return_day,
+            'return_day' => $request->return_day,
             'issue_status' => 'N',
         ]);
         $data->save();
@@ -75,7 +75,7 @@ class BookIssueController extends Controller
         // calculate the total fine  (total days * fine per day)
         $book = book_issue::where('id',$id)->get()->first();
         $first_date = date_create(date('Y-m-d'));
-        $last_date = date_create($book->return_date);
+        $last_date = date_create($book->return_day);
         $diff = date_diff($first_date, $last_date);
         //$fine = (settings::latest()->first()->fine * $diff->format('%a'));
         return view('book.issueBook_edit', [
