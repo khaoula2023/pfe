@@ -8,10 +8,22 @@
                 </div>
             </div>
             @if ($books)
-                <div class="row">
-                    <div class="col-md-12">
-                        <table class="content-table">
-                            <thead>
+            <div class="card">
+
+<div class="card-header">
+    
+</div>
+<div class="card-body">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pull-right">
+            
+            </div>
+        </div>
+    </div>
+    <table id="example1" class="table table-bordered table-striped table length">
+
+                <thead class="thead-dark">
                             <tr class="bg-primary" </tr>
                                 <th>Numero</th>
                                 <th>Nom Abonés</th>
@@ -26,19 +38,19 @@
                                 @forelse ($books as $book)
                                     <tr>
                                         <td>{{ $book->id }}</td>
-                                        <td>{{ $book->student->name }}</td>
-                                        <td>{{ $book->book->name }}</td>
-                                        <td>{{ $book->student->phone }}</td>
-                                        <td>{{ $book->student->email }}</td>
+                                        <td>{{ $book->student->Name }}</td>
+                                        <td>{{ $book->book->Titre }}</td>
+                                        <td>{{ $book->student->Phone }}</td>
+                                        <td>{{ $book->student->Email }}</td>
                                         <td>{{ $book->issue_date->format('d M, Y') }}</td>
-                                        <td>{{ $book->return_date->format('d M, Y') }}</td>
+                                        <td>{{ $book->return_day->format('d M, Y') }}</td>
                                         <td>@php $date1 = date_create(date('Y-m-d'));
-                                            $date2 = date_create($book->return_date->format('d-m-Y'));
+                                            $date2 = date_create($book->return_day->format('d-m-Y'));
                                             if($date1 > $date2){
                                               $diff = date_diff($date1,$date2);
-                                              echo $days = $diff->format('%a days');
+                                              echo $days = $diff->format('%a jours');
                                             }else{
-                                              echo '0 days';
+                                              echo '0 jours';
                                             } @endphp</td>
                                     </tr>
                                 @empty

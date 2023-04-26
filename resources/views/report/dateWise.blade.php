@@ -1,6 +1,9 @@
 @extends('layouts.admin_layout')
 
 @section('content')
+
+
+
     <div id="admin-content" class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
@@ -25,9 +28,22 @@
             </div>
         </div>
         @if ($books)
+
+        <div class="card">
+
+        <div class="card-header">
+            <h2 class="card-title">Liste des prêts</h2>
+            
+        </div>
+        <div class="card-body">
             <div class="row">
                 <div class="col-md-12">
-                    <table class="table table-hover table-striped">
+                    <div class="pull-right">
+                    </div>
+                </div>
+            </div>
+            <table id="example1" class="table table-bordered table-striped table length">
+
                         <thead class="thead-dark">
                             <tr>
                                 <th>Numero</th>
@@ -42,10 +58,10 @@
                             @forelse ($books as $book)
                                 <tr>
                                     <td>{{ $book->id }}</td>
-                                    <td>{{ $book->student->name }}</td>
-                                    <td>{{ $book->book->name }}</td>
-                                    <td>{{ $book->student->phone }}</td>
-                                    <td>{{ $book->student->email }}</td>
+                                    <td>{{ $book->student->Name }}</td>
+                                    <td>{{ $book->book->Titre }}</td>
+                                    <td>{{ $book->student->Phone }}</td>
+                                    <td>{{ $book->student->Email }}</td>
                                     <td>{{ $book->issue_date->format('d M, Y') }}</td>
                                 </tr>
                             @empty
